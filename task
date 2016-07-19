@@ -1,30 +1,32 @@
-mean, median - wind speed, air temperature, barometric pressure.
-
-mean = add values / number of values (average)
-median = if (odd(number_of_values)) {
-	sort()
-	return take_number_in_the_middle();
-} else {
-	return average(of_two_middle_values)
-}
-
-JSON - Javascript and JSON with Ray Villalobos
-
-		wind_speed	air_temp	barometric_pressure
+        wind_speed  air_temp    barometric_pressure
 mean
 median
 
-var jsonReturnData = {
-	"windSpeed": {
-		"mean": ,
-		"median": ,
-	},
-	"airTemperature": {
-		"mean": ,
-		"median": ,
-	},
-	"barometricPressure": {
-		"mean": ,
-		"median": ,
-	}
+mean = add values / number of values (average)
+median = if (odd(number_of_values)) {
+    sort()
+    return take_number_in_the_middle();
+} else {
+    return average(of_two_middle_values)
 }
+
+JSON - Javascript and JSON with Ray Villalobos
+var jsonReturnData = {
+    "windSpeed": {
+        "mean": ,
+        "median": ,
+    },
+    "airTemperature": {
+        "mean": ,
+        "median": ,
+    },
+    "barometricPressure": {
+        "mean": ,
+        "median": ,
+    }
+}
+
+
+60196 number of values
+mean - get_sum()/60196
+median - average(get_two_middle_numbers())
