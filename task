@@ -1,6 +1,7 @@
-        wind_speed  air_temp    barometric_pressure
-mean
-median
+          | wind_speed  |  air_temp  |  barometric_pressure  |
+__mean____|             |            |                       |
+__median__|             |            |                       |
+          |_____________|____________|_______________________|
 
 mean = add values / number of values (average)
 median = if (odd(number_of_values)) {

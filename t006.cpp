@@ -5,18 +5,22 @@
 
 #define PATH "statistics_raw_data.txt"
 
-uint8_t* get_data() {
+uint8_t* MeasureUnit::get_data() {
     FILE *file;
     file = fopen(PATH, "r");
+    
+    fseek(file, 0, SEEK_END);
+    int file_size = ftell(file);
+    fseek(file, 0, SEEK_SET);
 
-    size_t fread(void *ptr, size_t size_of_elements,
-                        size_t number_of_elements, FILE *a_file);
+    uint8_t data_raw[file_size];
+    fread(data_raw, 1, file_size, file);
 
     fclose(file);
-    return ptr;
+    return data_raw;
 }
 
 int main(void)
 {
-
+    
 }

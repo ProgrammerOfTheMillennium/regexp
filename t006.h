@@ -1,4 +1,4 @@
-// void set_data()
+// float set_data()
 // parth_data()
 // average()
 // mean()
@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-class MeasureUnit
+struct MeasureUnit
 {
     private:
         std::string date;
@@ -30,13 +30,14 @@ class MeasureUnit
         void SetWind_Gust();
         void SetWind_Speed();
 
-        void GetDate();
-        void GetTime();
-        void GetAir_Temp();
-        void GetBarometric_Press();
-        void GetDew_Point();
-        void GetRelative_Humidity();
-        void GetWind_Dir();
-        void GetWind_Gust();
-        void GetWind_Speed();
+        float GetDate();
+        float GetTime();
+        float GetAir_Temp();
+        float GetBarometric_Press();
+        float GetDew_Point();
+        float GetRelative_Humidity();
+        float GetWind_Dir();
+        float GetWind_Gust();
+        float GetWind_Speed();
 };
+
