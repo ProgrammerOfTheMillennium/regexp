@@ -1,0 +1,14 @@
+{
+    "airTemperature": {
+        "mean": "air_temp_avg",
+        "median": "air_temp_mdn"
+    },
+    "barometricPressure": {
+        "mean": "bar_press_avg",
+        "median": "bar_press_avg"
+    },
+    "windSpeed": {
+        "mean": "wind_speed_avg",
+        "median": "wind_speed_mdn"
+    }
+}

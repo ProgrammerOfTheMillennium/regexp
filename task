@@ -13,15 +13,20 @@ median = if (odd(number_of_values)) {
 
 JSON - Javascript and JSON with Ray Villalobos
 var jsonReturnData = {
-    "windSpeed": {
+    "windSpeed":
+    {
         "mean": ,
         "median": ,
     },
-    "airTemperature": {
+
+    "airTemperature":
+    {
         "mean": ,
         "median": ,
     },
-    "barometricPressure": {
+
+    "barometricPressure":
+    {
         "mean": ,
         "median": ,
     }
