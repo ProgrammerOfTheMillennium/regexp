@@ -1,26 +1,29 @@
 #include "t006.h"
 
+#include <string>
+#include <fstream>
+#include <sstream>
 #include <iostream>
-#include <stdio.h>
+#include <boost/xpressive/xpressive.hpp>
 
 #define PATH "statistics_raw_data.txt"
 
-uint8_t* MeasureUnit::get_data() {
-    FILE *file;
-    file = fopen(PATH, "r");
-    
-    fseek(file, 0, SEEK_END);
-    int file_size = ftell(file);
-    fseek(file, 0, SEEK_SET);
 
-    uint8_t data_raw[file_size];
-    fread(data_raw, 1, file_size, file);
-
-    fclose(file);
-    return data_raw;
-}
-
+// boost::xpressive
 int main(void)
 {
-    
+    std::ifstream file(PATH);
+    std::string line;
+    while (std::getline(file, line))
+    {
+        std::istringstream inputString(line);
+        boost::xpressive::sregex regge = boost::xpressive::sregex::compile("([0-9]{4}_[0-9]{2}_[0-9]{2})\\s+([0-9]{2}:[0-9]{2}:[0-9]{2})\\s+(\\d+\\.\\d+)\\s+(\\d+\\.\\d+)\\s+(\\d+\\.\\d+)\\s+(\\d+\\.\\d+)\\s+(\\d+\\.\\d+)\\s+(\\d+\\.\\d+)\\s+(\\d+\\.\\d+)");
+        boost::xpressive::smatch results;
+
+        if(regex_match(line, results, regge))
+        {
+            double first_num = std::stod(results[3]);
+            std::cout << first_num << std::endl;
+        }
+    }
 }

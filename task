@@ -31,3 +31,7 @@ var jsonReturnData = {
 60196 number of values
 mean - get_sum()/60196
 median - average(get_two_middle_numbers())
+
+
+RegEx:
+/([0-9]{4}_[0-9]{2}_[0-9]{2})\s+([0-9]{2}:[0-9]{2}:[0-9]{2})\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)/
