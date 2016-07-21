@@ -59,7 +59,10 @@ info:
         http://zenol.fr/blog/boost-property-tree/en.html
         http://www.codeproject.com/Articles/20027/JSON-Spirit-A-C-JSON-Parser-Generator-Implemented
 
+web_part:
     lamp:
         https://www.digitalocean.com/community/tutorials/linux-apache-mysql-php-lamp-ubuntu-14-04-ru
 
-http://www.html5rocks.com/ru/tutorials/file/dndfiles/
+    print_to_site:
+        http://www.html5rocks.com/ru/tutorials/file/dndfiles/
+        https://learn.javascript.ru/json#tasks
