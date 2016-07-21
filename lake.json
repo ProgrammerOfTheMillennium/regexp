@@ -1,14 +1,14 @@
 {
     "airTemperature": {
-        "mean": "air_temp_avg",
-        "median": "air_temp_mdn"
+        "mean": "47.698218456682447",
+        "median": "43.899999999999999"
     },
     "barometricPressure": {
-        "mean": "bar_press_avg",
-        "median": "bar_press_avg"
+        "mean": "30.050101669573884",
+        "median": "30.02"
     },
     "windSpeed": {
-        "mean": "wind_speed_avg",
-        "median": "wind_speed_mdn"
+        "mean": "7.4254539413572553",
+        "median": "5.7999999999999998"
     }
 }

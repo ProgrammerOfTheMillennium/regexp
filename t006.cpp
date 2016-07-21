@@ -1,4 +1,4 @@
-#include "t006.h"
+#include "json.cpp"
 
 #include <sys/time.h>
 
@@ -8,8 +8,6 @@
 #include <iostream>
 
 #include <boost/xpressive/xpressive.hpp>
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/json_parser.hpp>
 
 #define PATH "statistics_raw_data.txt"
 #define SIZE 60195
@@ -125,7 +123,7 @@ int main(void)
     secs = (t1 - t0) / 1000000.0L;
 
     std::cout << "\nOverall execution time is - " << secs << std::endl;
+
+    MakeJson(air_temp_avg, bar_press_avg, wind_speed_avg,
+        air_temp_mdn, bar_press_mdn, wind_speed_mdn);
 }
-
-
-
