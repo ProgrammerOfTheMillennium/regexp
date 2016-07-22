@@ -23,16 +23,16 @@
 
 
 
-
 <!doctype html>
 <html>
     <head>
-        <title>Load JSON File Locally</title>
+        <title>Code Clinic C++: Exersize #1</title>
         <script type="text/javascript" src="jquery.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     </head>
     <body>
-        Load JSON File Locally with jquery
+        <h3>Code Clinic C++: Exersize #1</h3>
+        <p>Load JSON File Locally with jquery</p>
 
         <script type="text/javascript">
         $(document).ready(function() {
@@ -41,8 +41,8 @@
                 $.getJSON("lake.json", function(data) {
                     if(data){
                     var txt = "";
-                    txt += "<tr><td>Mean</td><td>"+data.windSpeed.mean+"</td><td>"+data.airTemperature.mean+"</td><td>"+data.barometricPressure.mean+"</td></tr>";
-                    txt += "<tr><td>Median</td><td>"+data.windSpeed.median+"</td><td>"+data.airTemperature.median+"</td><td>"+data.barometricPressure.median+"</td></tr>";
+                    txt += "<tr><td><b>Mean</b></td><td>"+data.windSpeed.mean+"</td><td>"+data.airTemperature.mean+"</td><td>"+data.barometricPressure.mean+"</td></tr>";
+                    txt += "<tr><td><b>Median</b></td><td>"+data.windSpeed.median+"</td><td>"+data.airTemperature.median+"</td><td>"+data.barometricPressure.median+"</td></tr>";
 
                         if(!print_onetime){
                             $("#table").append(txt);
