@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Load JSON File Locally</title>
+        <script type="text/javascript" src="jquery.js"></script>\
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>
+        Load JSON File Locally
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#btn").click(function() {
+			    $.getJSON("lake.json", function(data) {
+			       	alert(data.windSpeed.median);
+			    });
+			});
+		});
+		</script>
+		<button id="btn">Bebebe</button>
+    </body>
+</html>
