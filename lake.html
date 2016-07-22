@@ -1,22 +1,70 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
     <head>
         <title>Load JSON File Locally</title>
         <script type="text/javascript" src="jquery.js"></script>\
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     </head>
     <body>
         Load JSON File Locally
 
-		<script type="text/javascript">
-		$(document).ready(function() {
-			$("#btn").click(function() {
-			    $.getJSON("lake.json", function(data) {
-			       	alert(data.windSpeed.median);
-			    });
-			});
-		});
-		</script>
-		<button id="btn">Bebebe</button>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                $.getJSON("lake.json", function(data) {
+                    alert(data.windSpeed.median);
+                });
+            });
+        });
+        </script>
+        <button id="btn">Bebebe</button>
+    </body>
+</html> -->
+
+
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>Load JSON File Locally</title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>
+        Load JSON File Locally with jquery
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            var print_onetime = false;
+            $("#btn").click(function() {
+                $.getJSON("lake.json", function(data) {
+                    if(data){
+                    var txt = "";
+                    txt += "<tr><td>Mean</td><td>"+data.windSpeed.mean+"</td><td>"+data.airTemperature.mean+"</td><td>"+data.barometricPressure.mean+"</td></tr>";
+                    txt += "<tr><td>Median</td><td>"+data.windSpeed.median+"</td><td>"+data.airTemperature.median+"</td><td>"+data.barometricPressure.median+"</td></tr>";
+
+                        if(!print_onetime){
+                            $("#table").append(txt);
+                            print_onetime = true;
+                        }
+                    }
+                });
+            });
+        });
+        </script>
+        <hr>
+        <button id="btn">Print data</button>
+        <hr>
+        <table id="table" border="2" class="table table-condensed">
+            <caption>Lake statistic analysis</caption>
+            <tr>
+                <th></th>
+                <th>Wind speed</th>
+                <th>Air temperature</th>
+                <th>Barometric pressure</th>
+            </tr>
+        </table>
+        <hr>
     </body>
 </html>
